@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Form</title>
+		<link rel="stylesheet" href="./giveFeedback.css" />
+		<script src="./giveFeedback.js" defer></script>
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<div class="navbar-logo-container">
+				<a href="../aboutPage/about.html">
+					<img src="../images/logo.png" alt="logo" class="navbar-logo" />
+				</a>
+			</div>
+			<input id="menu-toggle" type="checkbox" />
+			<label class="menu-burger-container" for="menu-toggle">
+				<div class="menu-button"></div>
+			</label>
+			<ul class="menu">
+				<li><a href="../mainPage/main.html">Home</a></li>
+				<li><a href="../aboutPage/about.html">About Us</a></li>
+				<li><a href="../accountPage/account.html">Account</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<main>
+				<section class="account-settings">
+					<form id="form-builder">
+						<img
+							src="../images/give-your-feedback.png"
+							alt="Form Thumbnail"
+							class="form-thumbnail"
+							style="object-fit: fill;"
+						/>
+						<p id="form-description">
+							Oppenheimer: How does this movie make you feel?
+						</p>
+						<p id="user-info">by Anonymous User</p>
+						<label class="label-description"
+							>How does this make you feel?</label
+						>
+						<div class="emojis">
+							<img src="../images/emojis/anger.png" alt="Anger" class="emoji" onclick="selectEmotion('Anger')" />
+							<img src="../images/emojis/anticipation.png" alt="Anticipation" class="emoji" onclick="selectEmotion('Anticipation')" />
+							<img src="../images/emojis/disgust.png" alt="Disgust" class="emoji" onclick="selectEmotion('Disgust')" />
+							<img src="../images/emojis/fear.png" alt="Fear" class="emoji" onclick="selectEmotion('Fear')" />
+							<img src="../images/emojis/joy.png" alt="Joy" class="emoji" onclick="selectEmotion('Joy')" />
+							<img src="../images/emojis/sadness.png" alt="Sadness" class="emoji" onclick="selectEmotion('Sadness')" />
+							<img src="../images/emojis/surprise.png" alt="Surprise" class="emoji" onclick="selectEmotion('Surprise')" />
+							<img src="../images/emojis/trust.png" alt="Trust" class="emoji" onclick="selectEmotion('Trust')" />
+						</div>
+						<label class="label-description"
+							>Please enter your feedback:</label
+						>
+						<input
+							type="text"
+							id="feedback-text"
+							name="feedback-text"
+						/>
+						<div class="form-group form-group-row">
+							<label for="anonym"
+								>Do you want to post it anonymous?</label
+							>
+							<input
+								type="checkbox"
+								id="anonym"
+								name="anonym"
+								onclick="toggleAnonym()"
+							/>
+						</div>
+						<button type="submit" class="feedback-button">POST FEEDBACK</button>
+					</form>
+				</section>
+			</main>
+		</div>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-contact-info">
+					<h3>Contact Us</h3>
+					<div class="contact-method">
+						<p>+123-456-7890</p>
+					</div>
+					<div class="contact-method">
+						<p>hello@reallygreatsite.com</p>
+					</div>
+					<div class="contact-method">
+						<p>123 Anywhere ST., Any City, 12345</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

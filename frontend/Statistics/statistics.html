@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setări Cont Utilizator</title>
+    <link rel="stylesheet" href="./statistics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="statistics.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo-container">
+            <a href="../aboutPage/about.html">
+                <img src="../images/logo.png" alt="logo" class="navbar-logo" />
+            </a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-burger-container" for="menu-toggle">
+            <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+            <li><a href="../mainPage/main.html">Home</a></li>
+            <li><a href="../aboutPage/about.html">About Us</a></li>
+            <li><a href="../accountPage/account.html">Account</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="container-account">
+            <aside>
+                <div class="profile-card">
+                    <img src="../images/profile-picture.jpeg" alt="profile picture" />
+                    <h3 id="displayed-name"></h3>
+                    <p>Email: <p id="displayed-email"></p></p>
+                    <button class="logout-button" id="logout-button">Logout</button>
+                </div>
+            </aside>
+
+            <main>
+                <div class="menu-settings">
+                    <a href="../myForms/createdForms.html" class="menu-button-settings">Back</a>
+                </div>
+                <h1 id="form-title">Form Statistics</h1>
+                <div class="card-wrapper">
+                    <div class="stats">
+                        <div class="stat-total">
+                            <h3>Total Responses</h3>
+                            <p id="total-responses" class="number">Loading...</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="charts-container">
+                        <div class="responses-diagram">
+                            <h3>Emotions Distribution</h3>
+                            <canvas id="emotions-chart"></canvas>
+                        </div>
+                        <div class="text-responses">
+                            <h3>Text Responses</h3>
+                            <ul id="text-responses"></ul>
+                        </div>
+                    </div>
+                    <div class="report-actions">
+                        <div class="export-buttons">
+                            <button id="exportJsonButton" class="button-form">Export JSON</button>
+                            <button id="exportCsvButton" class="button-form">Export CSV</button>
+                        </div>
+                        <div class="import-buttons">
+                            <input type="file" id="importFileInput" accept=".csv,.json" style="display: none;">
+                            <button id="importButton" class="button-form">Import Data</button>
+                        </div>
+                    </div>
+                    <div id="importResult" style="display: none;"></div>
+                    <input type="file" id="fileInput" style="display: none;" accept=".html,.csv,.json">
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-method">
+                    <p>+123-456-7890</p>
+                </div>
+                <div class="contact-method">
+                    <p>hello@reallygreatsite.com</p>
+                </div>
+                <div class="contact-method">
+                    <p>123 Anywhere ST., Any City, 12345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

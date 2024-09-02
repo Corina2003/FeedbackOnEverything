@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="./logAndReg/logAndReg.css" />
+		<script src="./login.js" type="module" defer></script>
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<div class="navbar-logo-container">
+				<a href="./aboutPageNotLogged/about.html">
+					<img
+						src="./images/logo.png"
+						alt="logo"
+						class="navbar-logo"
+					/>
+				</a>
+			</div>
+
+			<ul class="menu">
+				<li><a href="./aboutPageNotLogged/about.html">About Us</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<div class="login-container">
+				<form id="login-form" class="login-form">
+					<h2>Login</h2>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="eg:ana.popescu@gmail.com"
+							autocomplete="on"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password" />
+					</div>
+
+					<div class="form-group remember-me-group">
+						<input type="checkbox" id="remember-me" />
+						<label for="remember-me">Remember Me</label>
+					</div>
+					<div class="form-button-container">
+						<span class="submit-error" id="login-error"
+							>Wrong credentials</span
+						>
+						<button type="submit" class="button-form">Login</button>
+					</div>
+					<p>
+						Don't have an account?
+						<a href="./logAndReg/register.html">Register here</a>
+					</p>
+				</form>
+			</div>
+
+			<div class="logo-container">
+				<img src="./images/logo.png" alt="Logo" class="brand-logo" />
+			</div>
+		</div>
+	</body>
+</html>
